@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Super Star: Towards Streaming Real-time Interactive Agents for Digital Humans">
+  <meta name="keywords" content="Co-speech Gesture Generation; Agents; Digital Humans">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title>Nerfies: Deformable Neural Radiance Fields</title> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/file_1.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"> 
+            <span style="background: -webkit-linear-gradient(left, rgb(50, 134, 199) , rgb(243, 50, 50)); -webkit-background-clip: text; color: transparent;">
+              Super Star</span>
+              <span>: Towards Streaming Real-time Interactive</span>
+            <br>
+            Agents for Digital Humans
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Wentao Jiang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a>Youchen Xie</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Haidi Fan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Yajing Chen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Xin Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://shiye21.github.io/">Ye Shi</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://faculty.sist.shanghaitech.edu.cn/faculty/wangjingya/">Jingya Wang</a><sup>1,*</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ShanghaiTech University</span>
+            <span class="author-block"><sup>2</sup>Tencent</span>
+            <!-- <span class="author-block"><sup>*</sup>Corresponding authors</span> -->
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>  
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Corresponding authors</span>
+          </div>
+
+          <div class="is-size-3">ACM MM 2026</div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2503.16973v3" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.16973v3" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://super-star-2026.github.io/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>              
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle" style="text-align: center;">
+        “ 你是电, 你是光, 你是唯一的神话, 我只爱你。You are my <b><span style="color: rgb(201, 138, 1);">Super Star</span></b>. ”
+        <br>
+        <span style="display: inline-block; width: 100%; text-align: right;">——S.H.E</span>
+      </h2>
+      <!-- 添加了一个空行 -->
+      <div style="height: 1em;"></div>
+      <figure class="image" style="margin-bottom: 30px;">
+          <img
+            src="./static/images/L2L.png"
+            style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+      </figure>
+      <!-- <h2 class="subtitle" style="max-width: 85%; margin-left: auto; margin-right: auto; line-height: 1.4;"> -->
+      <h2 class="subtitle">
+        Figure 1. Super Star enables 3D digital humans to interact with users in real-time and generate speech synchronization gestures 
+        online based on user multimodal input via an online real-time interactive pipeline, which is trained through our <b><span style="color: rgb(224, 0, 138);">closed-loop self-evolution data pipeline </span></b>
+        to support continual adaptation to user preferences.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!--/ Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing co-speech gesture generation methods are predominantly studied in offline settings, where gestures are synthesized from 
+            complete speech segments. However,interactive digital humans in real-world scenarios are required to generate speech-synchronous 
+            gestures online,using only currently available response audio under strict latency constraints. As a result, prior methods are unsuitable 
+            for real-time interaction, as they either rely on future speech in formation or incur substantial inference delay. In this paper, we 
+            formulate online co-speech gesture generation for interactive digital humans and propose a real-time interactive framework that 
+            couples a streaming speech response module with an online gesture generation module.Specifically, the gesture generator is designed
+            as a causal multimodal autoregressive model that predicts body motion from streaming response speech and motion history, enabling 
+            low-latency and speech-aligned gesture synthesis without access to future speech.To support this setting, we further propose an 
+            offline data synthesis pipeline tailored to virtual companion scenarios, which leverages topic-and emotion-aware subject corpora 
+            to construct diverse human-agent dialogues and then generates co-speech gestures conditioned on the agent responses. Moreover, 
+            to bridge the gap between offline data construction and online deployment, we establish a self-evolving training loop by incorporating 
+            user feedback collected during online interaction into the data generation process, enabling continual adaptation to user preferences.
+            Extensive experiments demonstrate that our framework achieves superior better latency-quality trade-off, stronger speech-motion synchronization,
+            and higher user preference than competitive offline-to-online adapted baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+</section> 
+
+<!-- Paper video. -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.bilibili.com/video/BV12B1yYREqd/?spm_id_from=333.1007.tianma.1-1-1.click"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Overview</h2>
+
+        <figure class="image" style="margin-bottom: 30px;">
+          <img src="./media/framework.png" class="image-size">
+        </figure>
+
+        <h2 class="subtitle" style="text-align: left; font-size: 17px;">
+          Figure 2. An overview of <b><span style="color: rgb(201, 138, 1);">Super Star</span></b>. 
+          (a) Offline interactive data synthesis and <b><span style="color: rgb(224, 0, 138);">self-evolving loop pipeline</span></b> for constructing virtual
+          companion-oriented training data that continuously adapts to user preferences. (b) Online real-time interaction pipeline, where 
+          a <b><span style="color: purple;">streaming speech response module</span></b> is coupled with our <b><span style="color: rgb(1, 173, 185);">online gesture generator</span></b> to produce low-latency co-speech motions.
+      
+        </h2>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 border-b-1px mb-4">Pipeline</h2>
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <figure class="image">
+            <img src="./media/framework.png"  class="image-size" style="width: 95%; max-width: none; margin: 0 auto; display: block;">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="content has-text-justified" style="max-width: 90%; margin: 0 auto; padding-top: 20px;">
+          <p style="font-size: 1.05em; line-height: 1.6;">
+          Figure 2. An overview of <b><span style="color: rgb(201, 138, 1);">Super Star</span></b>. 
+          (a) Offline interactive data synthesis and <b><span style="color: rgb(224, 0, 138);">self-evolving loop pipeline</span></b> for constructing virtual
+          companion-oriented training data that continuously adapts to user preferences. (b) Online real-time interaction pipeline, where 
+          a <b><span style="color: purple;">streaming speech response module</span></b> is coupled with our <b><span style="color: rgb(1, 173, 185);">online gesture generator</span></b> to produce low-latency co-speech motions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 border-b-1px mb-4">Visualization</h2>
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <figure class="image">
+            <img src="./static/images/visualization.png"  class="image-size" style="width: 85%; max-width: none; margin: 0 auto; display: block;">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="content has-text-justified" style="max-width: 90%; margin: 0 auto; padding-top: 20px;">
+          <p style="font-size: 1.05em; line-height: 1.6;">
+            Figure 3. Qualitative comparison of online co-speech gesture generation.Given the same streaming response speech, our 
+            method reacts more promptly and generates more natural and synchronized gestures than offline-to-online adapted baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="container is-max-desktop">
+  <h2 class="title is-3 border-b-1px mb-4">Results (with a failure case)</h2>
+  <br>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+        <p>
+          As shown, our method not only produces more physically plausible reactions but also more responsive reactions due to stronger modeling ability for causal relationship between actions and reactions. <span style="color: blue;">Blue</span> for actors and <span style="color: rgb(20, 218, 20);">Green</span> for reactors.
+        </p>
+      </div>
+    </div>
+  </div>  
+  <section class="hero is-light is-small">
+    <div class="hero-body">  
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/whisper.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/kick.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/drink.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/whisper.mp4"
+                      type="video/mp4">
+            </video> -->
+            <!-- <div class="video-speed">1x</div> -->
+          <!-- </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/five.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/push.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/failure case1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+</div> -->
+
+
+<!-- <div class="container is-max-desktop">
+  <h2 class="title is-3 border-b-1px mb-4" style="text-align: justify">Comparison with Baselines</h2>
+  <br>
+  <div class="columns is-centered has-text-centered">
+      <div class="content has-text-justified" style="text-align: justify">
+        <p>
+          We provide a qualitative comparison of reaction sequences generated by MDM, ReGenNet and ARFlow with physical constraint guidance.
+          Both MDM and ReGenNet produce varying degrees of penetration between the actor and the reactor. In contrast, ARFlow produces more responsive and physically plausible reactions.
+          Here are some comparative videos: 
+        </p>
+    </div>
+  </div>
+  <br>
+  <div class="columns is-centered">
+    <h3 class="title is-4" style="margin-bottom: 0rem;">Whisper</h3>
+  </div>
+  <section class="hero is-light is-small">
+    <div class="hero-body">    
+      <div class="columns is-centered">
+        <div class="columns is-multiline is-variable is-2">
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/mdm_whisper.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">MDM</p>
+          </div>
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/regennet_whisper.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">ReGenNet</p>
+          </div>
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/whisper.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">✅ARFlow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <div class="columns is-centered">
+    <h3 class="title is-4" style="margin-bottom: 0rem;">Kick</h3>
+  </div>
+  <section class="hero is-light is-small">
+    <div class="hero-body">    
+      <div class="columns is-centered">
+        <div class="columns is-multiline is-variable is-2">
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/mdm_kick.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">MDM</p>
+          </div>
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/regennet_kick.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">ReGenNet</p>
+          </div>
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/kick.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">✅ARFlow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <div class="columns is-centered">
+    <h3 class="title is-4" style="margin-bottom: 0rem;">Drink</h3>
+  </div>
+  <section class="hero is-light is-small">
+    <div class="hero-body">    
+      <div class="columns is-centered">
+        <div class="columns is-multiline is-variable is-2">
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/mdm_drink.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">MDM</p>
+          </div>
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/regennet_drink.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">ReGenNet</p>
+          </div>
+          <div class="column is-4">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./media/drink.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">✅ARFlow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/4BiFEKbvJco?si=3JcDwPCNzDo7398g" 
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <br>
+
+
+<!-- 
+<div class="container is-max-desktop">
+  <section class="hero is-light is-small">
+    <div class="hero-body">    
+      <div class="columns is-centered">
+        <div class="columns is-multiline is-variable is-2">
+          <div class="column is-12">
+            <video style="width:100%; height:auto;" controls muted loading="lazy" autoplay loop playsinline>
+              <source src="./static/videos/Sim/simplay.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+</div> -->
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <div style="position: relative;">
+          <pre><code id="bibtex-code">@article{jiang2025arflow,
+            title={ARFlow: Human Action-Reaction Flow Matching with Physical Guidance},
+            author={Jiang, Wentao and Wang, Jingya and Lu, Haotao and Ji, Kaiyang and Jia, Baoxiong and Huang, Siyuan and Shi, Ye},
+            journal={arXiv preprint arXiv:2503.16973},
+            year={2025}
+          }
+        </code></pre>
+          <button onclick="copyToClipboard()" style="position: absolute; top: 5px; right: 5px; background: none; border: none; cursor: pointer;"> -->
+              <!-- 粘贴图标，可以使用Font Awesome 图标库 -->
+              <!-- <i class="fa fa-paste" aria-hidden="true"></i>
+          </button>
+      </div>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
